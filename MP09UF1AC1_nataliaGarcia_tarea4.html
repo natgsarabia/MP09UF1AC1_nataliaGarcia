@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4</title>
+    <style>
+        li{
+            margin-bottom: 2%;
+        }
+    </style>
+</head>
+<body>
+    <form action="/BEFormulario" method="post">
+        <ul>
+            <li>
+                <lable for="name">Nom:</lable>
+                <input type="text"required autofocus id="name" name="user_name" maxlength="20" placeholder="Nom"/>
+            </li>
+            <li>
+                <lable for="subnames">Cognoms:</lable>
+                <input type="text" required id="subnames" name="user_subnames" placeholder="Cognoms"/>
+            </li>   
+            <li>
+                <lable for="dni">Document d'identitat:</lable>
+                <input type="text" required id="dni" name="user_dni" pattern="[0-9]{8}[A-Za-z]{1}" minlength="9" maxlength="9" placeholder="Document d'identitat en format 00000000X"/>
+            </li>
+            <li>
+                <lable for="age">Edat:</lable>
+                <input type="text" id="age" name="user_age" placeholder="Edat"/>
+            </li> 
+            <li>
+                <lable for="date">Data de Neixement:</lable>
+                <input type="date" id="date" name="user_date" value="2010-01-01" min="1924-01-01" max="2023-12-31"/>
+            </li>
+            <li>
+                <lable for="mail">Correu electrònic:</lable>
+                <input type="email" id="mail" name="user_mail" placeholder="correoElectònic@gmail.com"/>
+            </li>   
+            <li>
+                <lable for="password">Contraseña:</lable>
+                <input type="password" required id="password" name="user_password" placeholder="Contrasenya"/>
+            </li>
+            <li>
+                <lable for="photo">Fotografia del DNI:</lable>
+                <input type="file" multiple id="photo" name="user_photo" accept="image/png, image/jpeg"/>
+            </li> 
+            <li class="button">
+                <button type="submit">Enviar</button>
+            </li>                     
+        </ul>
+            
+    </form>
+</body>
+</html>
